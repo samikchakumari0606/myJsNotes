@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Apply And Bind</title>
+</head>
+<body>
+    <h1>Call Apply and Bind</h1>
+</body>
+</html>
+<script>
+
+let printFullName=function(hometown,state){
+    console.log(this.firstName +" "+ this.lastName+" "+"she is from"+ " "+ hometown+" "+ state)
+}
+
+   
+let name={
+    firstName:"Samiksha",
+    lastName:"Kumari"
+}
+
+   
+let name2={
+    firstName:"Simmi",
+    lastName:"Kumari"
+}
+
+// printFullName.call(name);
+printFullName.apply(name2,["Pune","Mumbai"]);
+
+let printMyName=printFullName.bind(name2,"Mumbai","Maharastra");
+// console.log(printMyName);
+
+
+printMyName();
+
+
+</script>

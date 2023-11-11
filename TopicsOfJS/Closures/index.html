@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <h1>Closures</h1>
+</body>
+</html>
+<script>
+
+    //Closure==> is the combination of function bundled together with the ref of its sourrounding states(the laxical enviornment). 
+               //OR  with Closure gives us access to an outer function from the inner function.
+
+    function displayName(){
+        name="samiksha"
+        function myFunc(){
+            console.log(name)
+        }
+        myFunc();
+    }
+    displayName();
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <h1>Scope</h1>
+</body>
+</html>
+<script>
+    var name="samiksha";
+    var name="simmi";//redeclear //reasign
+    console.log(name);
+
+
+    function getName(){
+        let letScope="let";
+        letScope="var";//reasign//can not redeclear
+        console.log(letScope)
+    }
+    // console.log(letScope)//can not access outside the block
+    getName();
+
+
+    function get(){
+        const n1="first";//can not reasign//can not redeclear
+        console.log(n1)
+    }
+    console.log(n1)//can not access outside the block
+    get()
+
+
+
+</script>

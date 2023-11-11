@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        #box{
+            height:auto;
+            width:80%;
+            border:2px solid red;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        #first{
+            height:50px;
+            width:100%;
+            border:2px solid green;
+            gap:5px;
+        }
+        #first>button,#query{
+            height:30px;
+            width:80px;
+            margin-top: 10px;
+            font-size: 12px;
+            background-color: beige;
+            color:black;
+            border-radius: 10px;
+        }
+       
+        img{
+            width: 10%;
+        }
+        #ss{
+            height:250px;
+            width:100%;
+            border:2px solid red;
+        }
+        
+       #ss>img{
+            height:100%;
+            width:100%;
+        }
+
+        @media (max-width:500px){
+            #ss{
+            height:250px;
+            width:50%;
+            border:2px solid red;
+            margin: auto;
+        }
+        #first{
+            height:160px;
+            width:50%;
+           margin:auto;
+        }
+        #first>button,input{
+            display:block;
+            height:auto;
+            width:50px;
+            text-align: center;
+            font-size: 10px;
+            margin-left: 25%;
+        }
+          #box{
+            height:auto;
+            width:100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+          }
+    }
+
+    @media (min-width:500px) and (max-width:800px){
+            #ss{
+            height:250px;
+            width:70%;
+            border:2px solid black;
+            text-align: center;
+           
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- <h1>This is home page</h1> -->
+    <div id="ss">
+
+    </div>
+   
+   
+    <div id="first">
+        <button><a href="./Cart.html">cart page</a></button>
+        <button onclick="highToLow()">high to low</button>
+        <button onclick="LowToHigh()">low to high</button>
+         <input type="text" placeholder="search" id="query" oninput="filter()">
+    </div>
+    <div id="box">
+
+    </div>
+</body>
+</html>
+<script src="./index.js"></script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+     <h1>Hoisting</h1>
+</body>
+</html>
+<script>
+ 
+//Hoisting
+
+ console.log(getName)
+//  console.log(myObj)
+ let myObj="new this";
+  console.log(myObj);
+
+ getName();
+ function getName(){
+    console.log("Namaste Javascript")
+ }
+ 
+
+</script>

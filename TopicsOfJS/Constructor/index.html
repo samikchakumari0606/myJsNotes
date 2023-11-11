@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <h1>Constructor</h1>
+    <form id="myform" onsubmit="add(event)">
+        <input type="text" placeholder="enter your name" id="name"/><br/>
+        <input type="number" placeholder="enter your age" id="age"/><br/>
+        <input type="submit" value="submit">
+    </form>
+    
+   
+</body>
+</html>
+<script>
+
+    function myCons(n,a){
+        this.name=n;
+        this.age=a
+    }
+
+
+    function add(event){
+        event.preventDefault();
+        let form= document.getElementById("myform");
+        let name= document.getElementById("name").value;
+        let age= document.getElementById("age").value;
+        let obj=new myCons(name,age);
+        console.log(obj);
+    }
+   
+
+    add();
+      
+
+    
+     
+
+
+</script>

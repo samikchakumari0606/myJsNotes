@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop</title>
+</head>
+<body>
+    <h1>Event Loop</h1>
+</body>
+</html>
+<script>
+    //Event Loop==>JS has runtime MODEL based on event loop,which is responsible for executing the code,
+                  // collecting and proccessing the events and also execute queued tasks and sub-tasks.
+                  //In which EVENT LOOP pushes the task from TASK QUEUE to the CALL STACK.
+                  
+    function one(){
+        console.log("one")
+    }
+    function two(){
+        console.log("two")
+    }
+    function three(){
+        setTimeout(()=>{
+            console.log("three")
+        },3000)
+        console.log("four")
+
+    }
+    one();
+    two();
+    three();
+</script>

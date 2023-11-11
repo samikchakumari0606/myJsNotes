@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOF</title>
+</head>
+<body>
+    <h1>HOF</h1>
+</body>
+</html>
+<script>
+
+    let arr=[1,2,3,4,5,6];
+
+   //FOR EACH METHOD
+    let first=arr.forEach((item)=>{
+           console.log(item)
+    })
+
+
+    //MAP METHOD
+    let second=arr.map((item)=>{
+        return (item)
+    })
+    console.log(second)
+
+    
+     //FILTER METHOD
+    let third=arr.filter((item)=>{
+        return item%2==0
+    })
+
+    console.log(third)
+
+    //REDUCE METHOD
+    let fourth=arr.reduce((sum,el)=>{
+        return sum+el
+    })
+    console.log(fourth)
+
+    
+</script>

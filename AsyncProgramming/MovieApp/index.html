@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        #box{
+            margin: auto;
+        }
+       image,img{
+            width:80%;
+        }
+        #container{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            margin: auto;
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Home page</h1>
+    <div id="box">
+
+    </div>
+   
+     <div>
+        <button> <a href="./search.html">search page</a></button>
+        <button onclick="LowToHigh()">low</button>
+        <button onclick="HighToLow()">High</button>
+     </div>
+    <div id="container">
+        <img id="loader" src="https://media0.giphy.com/media/KG4PMQ0jyimywxNt8i/200w.webp?cid=ecf05e474cvlufnq2eil34d88exw1q46fye8ob0nruobk2v3&rid=200w.webp&ct=g">
+    </div>
+</body>
+</html>
+<script src="./index.js"></script>

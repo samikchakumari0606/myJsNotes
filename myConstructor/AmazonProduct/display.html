@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display page</title>
+    <style>
+        #box{
+            height:800px;
+            width:80%;
+            margin:auto;
+            border:2px solid red;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Page</h1>
+    <p>Add to Cart<span id="cart"> 0</span></p>
+    <h1>Total Price <span id="price"> 0</span></h1>
+    <div id="box">
+
+    </div>
+</body>
+</html>
+<script src="./display.js"></script>

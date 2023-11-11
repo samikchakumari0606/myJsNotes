@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        #box{
+            height:auto;
+            width:80%;
+            border:2px solid red;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        div{
+            border:2px solid green;
+            gap:5px;
+        }
+        img{
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h2>cart page</h2>
+    
+    <h1>Total Price <span id="price"> 0</span></h1>
+    <h3>Add to Cart <span id="cart"> 0</span> </h3>
+    <div id="box">
+     
+    </div>
+</body>
+</html>
+<script src="./Cart.js"></script>

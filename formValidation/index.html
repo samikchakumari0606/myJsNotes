@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+      body{
+        background-color: beige;
+       
+      }
+     h1{
+      text-align: center;
+      margin-top: 10%;
+      /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+       }
+      #box{
+        height:auto;
+        width:30%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin:auto;
+        text-align: center;
+       
+      }
+      input{
+        background-color: aqua;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        margin-top: 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      input[type="submit"]:hover{
+        background-color: rgb(4, 71, 65);
+      }
+
+      @media (max-width:350px){
+         #box{
+          width:50%;
+         
+         }
+         #box input{
+          width:60%;
+          border:2px solid black;
+          text-align: center;
+         }
+      }
+
+      @media (min-width:350px) and (max-width:1000px){
+        #box{
+          width:90%;
+         
+         }
+         #box input{
+          width:90%;
+         
+          text-align: center;
+         }
+      }
+      
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <div id="box">
+      <form action="" onsubmit="return validateForm()">
+        <input type="text" placeholder="username" id="username">
+        <p id="userError"></p>
+        <input type="text" placeholder="password" id="password">
+        <p id="passErr"> </p>
+        <input type="submit">
+      </form>
+    </div>
+   
+</body>
+</html>
+<script>
+    let username=document.getElementById("username");
+    let password=document.getElementById("password");
+    let flag=1;
+
+
+    function validateForm(){
+          if(username.value==""){
+            document.getElementById("userError").innerHTML="username is empty";
+           flag=0;
+        }
+          else if(username.value.length<3){
+            document.getElementById("userError").innerHTML="username is require min 3 char"
+         flag=0;
+        }
+          else{
+            document.getElementById("userError").innerHTML=""
+           flag=1
+           
+        }
+
+          if(password.value==""){
+            document.getElementById("passErr").innerHTML="password is empty"
+          flag=0;
+        }
+          else if(password.value.length<3){
+            document.getElementById("passErr").innerHTML="password is require min 3 char"
+            flag=0;
+        }
+          else{
+            document.getElementById("passErr").innerHTML=""
+          flag=1
+        }
+
+        if(flag){
+            alert("form is submitted")
+            return true;
+            
+        }
+        else{
+          return false;
+        }
+          
+    }
+</script>
